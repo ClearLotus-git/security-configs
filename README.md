@@ -1,5 +1,5 @@
 # security-configs
-SSH client configurations
+## SSH client configurations
 
 -Disables password authentication
 
