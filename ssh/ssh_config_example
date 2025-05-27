@@ -1,0 +1,31 @@
+sshd_config
+
+# Disable root login
+PermitRootLogin no
+
+# Use only protocol 2
+Protocol 2
+
+# Allow only specific users or groups
+AllowUsers nicholas
+
+# Disable password authentication (use keys only)
+PasswordAuthentication no
+
+# Enable public key authentication
+PubkeyAuthentication yes
+
+# Limit maximum authentication attempts
+MaxAuthTries 3
+
+# Enable logging for all auth events
+LogLevel VERBOSE
+
+Client-side ~/.ssh/config
+
+Host myserver
+    HostName 192.168.1.100
+    User Lotus
+    IdentityFile ~/.ssh/id_rsa
+    ForwardAgent yes
+    ServerAliveInterval 60
